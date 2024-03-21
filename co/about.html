@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="C:\Users\USER\Desktop\co\css\mypro.css">
+    <script src="C:\Users\USER\Desktop\co\js\wrkbnch.js"></script>
+</head>
+
+<body>
+    <!--navbar-->
+  <nav class="navbar navbar-expand-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img class="logo" src="C:\Users\USER\Desktop\co\images\lg.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav ms-auto d-flex gap-5">
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/Users/hrk/Desktop/co/mypro.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: orangered" >About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/Users/hrk/Desktop/co/contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/Users/hrk/Desktop/co/cart.html">cart</a>
+          </li>
+        </ul>
+        <div class="bn  d-flex ms-auto" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+          <a href="#" class="action_btn">Login / SignUp</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--login-->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form>
+            User Name:
+            <input type="text" name="firstname"><br /><br>
+            Password:
+            &nbsp;&nbsp;<input type="password"><br /><br>
+            <div class="d-flex justify-content-center">
+              <input
+                style="background-color: aquamarine; border-radius: 10px; border-style: none;font-weight: 500; width: 77px; height: 37px;"
+                type="submit" class="sub" value="Login">
+            </div>
+          </form><br>
+          <div class="modlog d-flex justify-content-center">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1"
+              style="background-color: aquamarine; border-radius: 10px; border-style: none; font-weight: 500;"><a
+                href="#" style="text-decoration: none;">SignUp</a></button>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- signup -->
+  <div class="modal fade" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">SignUp</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form name="myform" method="post" action=# onsubmit="return validateform()">
+            First Name:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+              name="firstname"><br /><br>
+            Last Name:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+              name="lastname"><br /><br>
+            Number:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+              type="text" name="num"><span id="numloc"></span><br /><br>
+            Password:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+              type="password" name="password"><br /><br>
+            Re-enter Password:
+            <input type="password" name="password2" /><br /><br>
+            <div class="d-flex justify-content-center">
+              <input
+                style="background-color: aquamarine; border-radius: 10px; border-style: none;font-weight: 500; width: 77px; height: 37px;"
+                type="submit" class="sub" value="register">
+            </div>
+          </form><br>
+          <div class="modlog d-flex justify-content-center">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+              style="background-color: aquamarine; border-radius: 10px; border-style: none; font-weight: 500; width: 77px; height: 37px;">Login</button>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--about-->
+    <div class="main row bg-dark container-fluid">
+        <div class="content col-md-6 text-light text-center">
+            <h2 class="mt-3">About us: a printing company</h2>
+            <h4 class="mt-3">The story of UPrinting: a vision for the perfectionists</h4>
+            <p class="mt-3">UPrinting started in 2005 when e-commerce was finding its foothold online. Since then, we have grown and expanded to become the go-to printing company for small, medium and large business alike.</p>
+            <p>We understand the importance of exceeding expectations and getting it right the first time. That’s why every stage of the printing process—from design to checkout to shipping—delivers the highest quality every time.</p>
+        </div>
+        <div class="image col-md-6"><img class="w-100" src="C:\Users\USER\Desktop\co\images\abt.jpg" ></div>
+    </div>
+    <div class="text-center mt-5">
+        <h1>Our Perfect Product</h1>
+    </div>
+    <div class="det d-flex row container-fluid mt-5 rounded-4" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;" >
+        <div class="det1 col-md-4 rounded-4  d-flex justify-content-center align-items-center text-center flex-column" >
+            <img class="w-75 rounded-4" src="C:\Users\USER\Desktop\co\images\filchck.png">
+            <h6>Before Printing</h6>
+            <p>Before we start printing, we run each file through 13 checkpoints so your order is set up to print perfectly. Just the way you expect.</p>
+        </div>
+        <div class="det2 col-md-4 rounded-4 d-flex justify-content-center align-items-center text-center flex-column">
+            <img class="w-75 rounded-4" src="C:\Users\USER\Desktop\co\images\chck.png">
+            <h6>Printing & Finishing</h6>
+            <p>During production, your job goes through 14 machine-run and human-led inspections to catch errors while there’s time to correct them.</p>
+        </div>
+        <div class="det3 col-md-4 rounded-4  d-flex justify-content-center align-items-center text-center flex-column">
+            <img class="w-75 rounded-4" src="C:\Users\USER\Desktop\co\images\ship.png">
+            <h6>Quality Control & Shipping</h6>
+            <p>The final quality inspection has 6 points to ensure that your printed product meets our printing standards and is shipped on time.</p>
+        </div>
+    </div>
+    <div class="container text-center mt-5">
+        <h1>See Why Customers Love Our Service!</h1>
+        <div class="row rounded-4" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+            <div class="col-md-4 d-flex justify-content-center align-items-center text-center flex-column">
+                <img class="w-75 rounded-4" src="C:\Users\USER\Desktop\co\images\gft.png">
+                <h6>CHOOSE YOUR DELIVERY DATE</h6>
+                <p>Avoid unnecessary artist alley headaches and stressful wedding deadlines. We combine shipping & print time to take the guesswork out of ordering— just choose your delivery date at checkout and we’ll make sure your package arrives when you need it.</p>
+            </div>
+            <div class="col-md-4">
+                <img class="w-75 rounded-4" src="C:\Users\USER\Desktop\co\images\mail.png">
+                <h6>FREE HARD COPY PROOFS</h6>
+                <p>Creating files can be complicated! Believe us, we’ve been there. To ensure your prints are just right, we offer an optional free hard copy proof every time you order prints. Once received, you can make any needed changes before printing. Don’t have time for a hard copy? We have an easy online-proofing service too!</p>
+            </div>
+            <div class="col-md-4">
+                <img class="w-75 rounded-4" src="C:\Users\USER\Desktop\co\images\compassion.png">
+                <h6>COMPASSIONATE SERVICE</h6>
+                <p>At CatPrint, a high quality product goes hand-in-hand with high quality customer support. Our friendly reps are with you from start to finish. Send us an email at support@catprint.com, start a conversation with our ChatCat, or just give us a good old-fashioned phone call at (877)228-7768.</p>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <footer class="bg-dark">
+        <div class="container foot mt-5 text-center">
+          <div class="row">
+            <div class="col-md-3 mt-5">
+              <h5><a>Easy Returns: Free Replacement or Full Refund</a></h5>
+              <img src="C:\Users\USER\Desktop\co\images\lg.png" class="w-50 mt-3">
+            </div>
+            <div class="col-md-3 mt-5">
+              <h5 >Let us help</h5>
+              <h5 class="mt-5"><a href="">My Account</a></h5>
+              <h5 ><a href="">Contact us</a></h5>
+              <h5 ><a href="">All Products</a></h5>
+            </div>
+            <div class="col-md-3 mt-5">
+              <h5 >Our Company</h5>
+              <h5 class="mt-5"><a href="">Careers</a></h5>
+              <h5 ><a href="">For investors</a></h5>
+              <h5 ><a href="">For media</a></h5>
+              <h5 ><a href="">Sustainability</a></h5>
+              <h5 ><a href="">Annual Returns</a></h5>
+              <h5 ><a href="">Corporate Social Responsibility</a></h5>
+            </div>
+            <div class="col-md-3 mt-5">
+              <h5 >Our policies</h5>
+              <h5 class="mt-5"><a href="">Terms and Conditions</a></h5>
+              <h5 ><a href="">Privacy and Cookie Policy</a></h5>
+              <h5 ><a href="">Copyright matters</a></h5>
+              <h5 ><a href="">Patents & trademarks</a></h5>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+
+</html>

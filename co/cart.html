@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="C:\Users\USER\Desktop\co\css\mypro.css">
+    <script src="wrkbnch.js"></script>
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img class="logo" src="C:\Users\USER\Desktop\co\images\lg.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav ms-auto d-flex gap-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///C:/Users/hrk/Desktop/co/mypro.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///C:/Users/hrk/Desktop/co/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="file:///C:/Users/hrk/Desktop/co/contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: orangered">cart</a>
+                    </li>
+                </ul>
+                <div class="bn  d-flex ms-auto" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                    <a href="#" class="action_btn">Login / SignUp</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--login-->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form>
+                        User Name:
+                        <input type="text" name="firstname"><br /><br>
+                        Password:
+                        &nbsp;&nbsp;<input type="password"><br /><br>
+                        <div class="d-flex justify-content-center">
+                            <input
+                                style="background-color: aquamarine; border-radius: 10px; border-style: none;font-weight: 500; width: 77px; height: 37px;"
+                                type="submit" class="sub" value="Login">
+                        </div>
+                    </form><br>
+                    <div class="modlog d-flex justify-content-center">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1"
+                            style="background-color: aquamarine; border-radius: 10px; border-style: none; font-weight: 500;"><a
+                                href="#" style="text-decoration: none;">SignUp</a></button>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- signup -->
+    <div class="modal fade" id="myModal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">SignUp</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form name="myform" method="post" action=# onsubmit="return validateform()">
+                        First Name:
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+                            name="firstname"><br /><br>
+                        Last Name:
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+                            name="lastname"><br /><br>
+                        Number:
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                            type="text" name="num"><span id="numloc"></span><br /><br>
+                        Password:
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                            type="password" name="password"><br /><br>
+                        Re-enter Password:
+                        <input type="password" name="password2" /><br /><br>
+                        <div class="d-flex justify-content-center">
+                            <input
+                                style="background-color: aquamarine; border-radius: 10px; border-style: none;font-weight: 500; width: 77px; height: 37px;"
+                                type="submit" class="sub" value="register">
+                        </div>
+                    </form><br>
+                    <div class="modlog d-flex justify-content-center">
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                            style="background-color: aquamarine; border-radius: 10px; border-style: none; font-weight: 500; width: 77px; height: 37px;">Login</button>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--cart-->
+    <div class="container-fluid">
+        <div class="d-flex row">
+            <div class="col-md-8 row gap-3" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+                <div class="col-md-12 pro-box" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+                    <div class="row">
+                        <div class="col-md-8  prodect">
+                            <div class="prdct d-flex">
+                                <img class="img-fluid " src="C:\Users\USER\Desktop\co\images\pumabags.jpeg" alt="" style="width: 120px; height: 120px; " >
+                                <div class="text-center">
+                                    <p>Khargadham Full Arm Sleeves & . UV, Dust & Sun Protective</p>
+                                    <div class="d-flex justify-content-between mx-4">
+                                        <p>₹159</p>
+                                        <p class="">2 offers applied</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 deldate  text-success">Delivery by Wed Mar 13</div>
+                    </div>
+                    <div class="div d-flex justify-content-between gap-1 mt-1">
+                        <div class="d-flex ">
+                            <label for="drop">Qty:</label>
+                            <select name="drop" id="drop" >
+                                <option value="volvo">1</option>
+                                <option value="saab">2</option>
+                                <option value="audi">3</option>
+                                <option value="opel">4</option>
+                                <option value="opel">5</option>
+                                <option value="opel">6</option>
+                                <option value="opel">7</option>
+                            </select>
+                        </div>
+                        <a href="" style="text-decoration: none;"><h6>Save for later</h6></a>    
+                        <a href="" style="text-decoration: none;"><h6>Buy this now</h6></a>
+                    </div>
+                </div>
+                <div class="col-md-12 pro-box" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+                    <div class="row">
+                        <div class="col-md-8  prodect">
+                            <div class="prdct d-flex">
+                                <img class="img-fluid " src="C:\Users\USER\Desktop\co\images\pumabags.jpeg" alt="" style="width: 120px; height: 120px; " >
+                                <div class="text-center">
+                                    <p>Khargadham Full Arm Sleeves & . UV, Dust & Sun Protective</p>
+                                    <div class="d-flex justify-content-between mx-4">
+                                        <p>₹159</p>
+                                        <p class="">2 offers applied</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 deldate  text-success">Delivery by Wed Mar 13</div>
+                    </div>
+                    <div class="div d-flex justify-content-between gap-1 mt-1">
+                        <div class="d-flex ">
+                            <label for="drop">Qty:</label>
+                            <select name="drop" id="drop" >
+                                <option value="volvo">1</option>
+                                <option value="saab">2</option>
+                                <option value="audi">3</option>
+                                <option value="opel">4</option>
+                                <option value="opel">5</option>
+                                <option value="opel">6</option>
+                                <option value="opel">7</option>
+                            </select>
+                        </div>
+                        <a href="" style="text-decoration: none;"><h6>Save for later</h6></a>    
+                        <a href="" style="text-decoration: none;"><h6>Buy this now</h6></a>
+                    </div>
+                </div>
+                <div class="col-md-12 pro-box" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+                    <div class="row">
+                        <div class="col-md-8  prodect">
+                            <div class="prdct d-flex">
+                                <img class="img-fluid " src="C:\Users\USER\Desktop\co\images\pumabags.jpeg" alt="" style="width: 120px; height: 120px; " >
+                                <div class="text-center">
+                                    <p>Khargadham Full Arm Sleeves & . UV, Dust & Sun Protective</p>
+                                    <div class="d-flex justify-content-between mx-4">
+                                        <p>₹159</p>
+                                        <p class="">2 offers applied</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 deldate  text-success">Delivery by Wed Mar 13</div>
+                    </div>
+                    <div class="div d-flex justify-content-between gap-1 mt-1">
+                        <div class="d-flex ">
+                            <label for="drop">Qty:</label>
+                            <select name="drop" id="drop" >
+                                <option value="volvo">1</option>
+                                <option value="saab">2</option>
+                                <option value="audi">3</option>
+                                <option value="opel">4</option>
+                                <option value="opel">5</option>
+                                <option value="opel">6</option>
+                                <option value="opel">7</option>
+                            </select>
+                        </div>
+                        <a href="" style="text-decoration: none;"><h6>Save for later</h6></a>    
+                        <a href="" style="text-decoration: none;"><h6>Buy this now</h6></a>
+                    </div>
+                </div>
+                <div class="col-md-12 pro-box" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;">
+                    <div class="row">
+                        <div class="col-md-8  prodect">
+                            <div class="prdct d-flex">
+                                <img class="img-fluid " src="C:\Users\USER\Desktop\co\images\pumabags.jpeg" alt="" style="width: 120px; height: 120px; " >
+                                <div class="text-center">
+                                    <p>Khargadham Full Arm Sleeves & . UV, Dust & Sun Protective</p>
+                                    <div class="d-flex justify-content-between mx-4">
+                                        <p>₹159</p>
+                                        <p class="">2 offers applied</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 deldate  text-success">Delivery by Wed Mar 13</div>
+                    </div>
+                    <div class="div d-flex justify-content-between gap-1 mt-1">
+                        <div class="d-flex ">
+                            <label for="drop">Qty:</label>
+                            <select name="drop" id="drop" >
+                                <option value="volvo">1</option>
+                                <option value="saab">2</option>
+                                <option value="audi">3</option>
+                                <option value="opel">4</option>
+                                <option value="opel">5</option>
+                                <option value="opel">6</option>
+                                <option value="opel">7</option>
+                            </select>
+                        </div>
+                        <a href="" style="text-decoration: none;"><h6>Save for later</h6></a>    
+                        <a href="" style="text-decoration: none;"><h6>Buy this now</h6></a>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-4  price-box">
+                <div class="container">
+                    <h3>PRICE DETAILS</h3>
+                    <HR style="border: solid;">
+                    <div class="d-flex justify-content-between">
+                        <h6>Price ( 1 item)</h6>
+                        <h3>₹499</h3>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h6>Discount</h6>
+                        <h3>-₹340</h3>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h6>Delivery Charges</h6>
+                        <h3>FREE</h3>
+                    </div>
+                    <HR style="border: solid; border-style: dotted;">
+                    <div class="d-flex justify-content-between">
+                        <h3>Total Amount</h3>
+                        <h3>₹499</h3>
+                    </div>
+                    <HR style="border: solid; border-style: dotted;">
+                    <h5> You will save ₹340 on this order</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="buy d-flex sticky-bottom justify-content-between bg-black" style="height: 50px;">
+        <h5 class=" my-3 mx-5 text-light ">₹340</h5>
+        <button class="my-1 mx-4"
+            style="background-color: rgb(236, 93, 10); border-style: none; border-radius: 8px;">place order</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>print</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="C:\Users\USER\Desktop\co\css\mypro.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="wrkbnch.js"></script>
+</head>
+
+<body>
+  <!--navbar-->
+  <nav class="navbar navbar-expand-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img class="logo" src="C:\Users\USER\Desktop\co\images\lg.png" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav ms-auto d-flex gap-5">
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: orangered">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/Users/hrk/Desktop/co/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/Users/hrk/Desktop/co/contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="file:///C:/Users/hrk/Desktop/co/cart.html">cart</a>
+          </li>
+        </ul>
+        <div class="bn  d-flex ms-auto" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+          <a href="#" class="action_btn">Login / SignUp</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--login-->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form>
+            User Name:
+            <input type="text" name="firstname"><br /><br>
+            Password:
+            &nbsp;&nbsp;<input type="password"><br /><br>
+            <div class="d-flex justify-content-center">
+              <input
+                style="background-color: aquamarine; border-radius: 10px; border-style: none;font-weight: 500; width: 77px; height: 37px;"
+                type="submit" class="sub" value="Login">
+            </div>
+          </form><br>
+          <div class="modlog d-flex justify-content-center">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal1"
+              style="background-color: aquamarine; border-radius: 10px; border-style: none; font-weight: 500;"><a
+                href="#" style="text-decoration: none;">SignUp</a></button>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- signup -->
+  <div class="modal fade" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">SignUp</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form name="myform" method="post" action=# onsubmit="return validateform()">
+            First Name:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+              name="firstname"><br /><br>
+            Last Name:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+              name="lastname"><br /><br>
+            Number:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+              type="text" name="num"><span id="numloc"></span><br /><br>
+            Password:
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+              type="password" name="password"><br /><br>
+            Re-enter Password:
+            <input type="password" name="password2" /><br /><br>
+            <div class="d-flex justify-content-center">
+              <input
+                style="background-color: aquamarine; border-radius: 10px; border-style: none;font-weight: 500; width: 77px; height: 37px;"
+                type="submit" class="sub" value="register">
+            </div>
+          </form><br>
+          <div class="modlog d-flex justify-content-center">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+              style="background-color: aquamarine; border-radius: 10px; border-style: none; font-weight: 500; width: 77px; height: 37px;">Login</button>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <!--firstbanner carousel-->
+    <div class="mainbox row bg-light">
+      <div class="leftbox col-md-6 d-flex flex-column justify-content-center align-items-center">
+        <h5 style="font-weight: 150;">WINTER FAVORITES</h5>
+        <h1>Seasonal Best Sellers</h1>
+        <p class="text-center">Our best-selling Wedding invitations,art prints,bussines cards,and more-all on your
+          favorites high-quaity
+          papers</p>
+        <button type="button" class="btn border-2 getbtn">Discover</button>
+      </div>
+      <div class="rightbox col-md-6">
+        <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel"
+          style="box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; border-radius:20px 1px 1px 20px;">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="C:\Users\USER\Desktop\co\images\wedtempl.jpg" alt="Los Angeles" class="d-block"
+                style="border-radius:20px 1px 1px 20px; width:100%;">
+            </div>
+            <div class="carousel-item">
+              <img src="C:\Users\USER\Desktop\co\images\wedtempl1.jpg" alt="Chicago" class="d-block"
+                style="border-radius: 20px 1px 1px 20px; width:100%;">
+            </div>
+            <div class="carousel-item">
+              <img src="C:\Users\USER\Desktop\co\images\wedtempl2.jpg" alt="York" class="d-block" style="border-radius: 20px 1px 1px 20px; width:100%">
+            </div>
+            <div class="carousel-item">
+              <img src="C:\Users\USER\Desktop\co\images\wedtempl3.jpg" alt="York" class="d-block" style="border-radius: 20px 1px 1px 20px; width:100%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Categories carousel-->
+    <div class="contain container-fluid mt-5" style="position: relative;" >
+      <div class="heading">
+        <h1>Explore all Categories</h1>
+      </div>
+      <div class="list">
+        <div class="item active">
+          <div class="bx">
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\custmwedig.jpg" class="img">
+              <div class="content text-center w-100">
+                Wedding Cards
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\viscrd.jpg" class="img">
+              <div class="content text-center w-100">
+                Visiting Cards
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\custmcap.jpg" class="img">
+              <div class="content text-center w-100">
+                Custom Caps
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\custmtshrt.jpg" class="img">
+              <div class="content text-center w-100">
+                Custom T-Shirt
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\posters.jpg" class="img">
+              <div class="content text-center w-100">
+                Signs & Posters
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\custmbag.png" class="img">
+              <div class="content text-center w-100">
+                Bags & clothings
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\custmstik.jpg" class="img">
+              <div class="content text-center w-100">
+                Labels & Stickers
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="bx">
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img">
+              <div class="content text-center">
+                Name Slider
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\7.jpg" class="img">
+              <div class="content text-center">
+                Name Slider
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img">
+              <div class="content text-center">
+                Name Slider
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img">
+              <div class="content text-center">
+                Name Slider
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img">
+              <div class="content text-center">
+                Name Slider
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="arrowsl">
+        <button id="prev">
+          <</button>
+      </div>
+      <div class="arrowsr">
+        <button id="next">></button>
+      </div>
+      <script src="C:\Users\USER\Desktop\co\js\productcarousel.js"></script>
+    </div>
+    <br>
+    <br>
+    <br>
+    <!--Polular Products-->
+    <div class="contain container-fluid mt-5" style="position: relative;" >
+      <div class="heading">
+        <h1>Our Most Popular Products</h1>
+      </div>
+      <div class="list">
+        <div class="item active">
+          <div class="bx">
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\viscrd2.jpeg" class="img"style="border-radius: 15px;">
+              <div class="content text-center">
+                Visiting Cards
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\custmtshrt2.jpg" class="img" style="border-radius: 15px;">
+              <div class="content text-center">
+                Custom T-shirt
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\custmstmp2.jpg" class="img" style="border-radius: 15px;">
+              <div class="content container-fluid ">
+                Stamps & Ink
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\custmalbm.jpg" class="img" style="border-radius: 15px;">
+              <div class="content text-center ">
+                Albums
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\flyers.jpeg" class="img" style="border-radius: 15px;">
+              <div class="content text-center ">
+                Flyers
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\letterhd.jpg" class="img" style="border-radius: 15px;">
+              <div class="content text-center">
+                Letterheads
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\custmbottle2.jpeg" class="img" style="border-radius: 15px;">
+              <div class="content text-center">
+                Custom bottle
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="bx">
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img" style="border-radius: 15px;">
+              <div class="content">
+                Name Slider
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\7.jpg" class="img" style="border-radius: 15px;">
+              <div class="content">
+                Name Slider
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img" style="border-radius: 15px;">
+              <div class="content">
+                Name Slider
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img" style="border-radius: 15px;">
+              <div class="content">
+                Name Slider
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+            <div class="con my-2">
+              <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img" style="border-radius: 15px;">
+              <div class="content">
+                Name Slider
+              </div>
+              <div class="info mx-4">
+                <div class="btn">
+                  shop now
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="arrowsl">
+        <button id="prev">
+          <</button>
+      </div>
+      <div class="arrowsr">
+        <button id="next">></button>
+      </div>
+      <script src="C:\Users\USER\Desktop\co\js\productcarousel.js"></script>
+    </div>
+    <br>
+    <br>
+    <br>
+  <!--trending products-->
+  <div class="treprdct container-fluid mt-5 " style="position: relative;" >
+    <div class="heading">
+      <h1>Trending Products</h1>
+    </div>
+    <div class="list">
+      <div class="item active">
+        <div class="bx">
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\embcap.PNG" class="img">
+            <div class="info mx-4">
+              <div class="btn mx-3 ">
+                shop now
+              </div>
+              <h6>Embroidered Caps</h6>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\prepolo.jpg" class="img">
+            <div class="info mx-4">
+              <div class="btn mx-3">
+                shop now
+              </div>
+              <h6>Premium T-Shirts</h6>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\officeshrt.PNG" class="img">
+            <div class="info mx-4">
+              <div class="btn mx-3">
+                shop now
+              </div>
+              <h6 class="mx-4">Office Shirts</h6>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\notbk.jpg" class="img">
+            <div class="info mx-4">
+              <div class="btn mx-3">
+                shop now
+              </div>
+              <h6>Custom Notebook</h6>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\phtmug.jpg" class="img">
+            <div class="info mx-4">
+              <div class="btn mx-3">
+                shop now
+              </div>
+              <h6 class="mx-4">Photo Mugs</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="bx">
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img" style="border-radius: 15px;">
+            <div class="content">
+              Name Slider
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\7.jpg" class="img" style="border-radius: 15px;">
+            <div class="content">
+              Name Slider
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img" style="border-radius: 15px;">
+            <div class="content">
+              Name Slider
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img" style="border-radius: 15px;">
+            <div class="content">
+              Name Slider
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="arrowsl">
+      <button id="prev">
+        <</button>
+    </div>
+    <div class="arrowsr">
+      <button id="next">></button>
+    </div>
+    <script src="C:\Users\USER\Desktop\co\js\productcarousel.js"></script>
+  </div>
+  <!--branded products-->
+  <div class="contain container-fluid mt-5" style="position: relative;" >
+    <div class="heading">
+      <h1>Branded Products</h1>
+    </div>
+    <div class="list">
+      <div class="item active">
+        <div class="bx">
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\branpolo.jpeg" class="img" style="border-radius: 15px;">
+            <div class="content text-center">
+              Puma T-shirt
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\scottshrt.jpeg" class="img" style="border-radius: 15px;">
+            <div class="content container-fluid">
+              Scott T-shirt
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\adidas.jpeg" class="img" style="border-radius: 15px;">
+            <div class="content text-center ">
+              Adidas T-shirt
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\adidascap.jpg" class="img" style="border-radius: 15px;">
+            <div class="content text-center ">
+              Adidas Caps
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\pumacaps.jpg" class="img" style="border-radius: 15px;">
+            <div class="content text-center">
+              Puma Caps
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\pumabags.jpeg" class="img" style="border-radius: 15px;">
+            <div class="content text-center">
+              Puma Bags
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\adidasbags.jpeg" class="img" style="border-radius: 15px;">
+            <div class="content text-center">
+              Puma Bags
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="bx">
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img" style="border-radius: 15px;">
+            <div class="content">
+              Name Slider
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\7.jpg" class="img" style="border-radius: 15px;">
+            <div class="content">
+              Name Slider
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img" style="border-radius: 15px;">
+            <div class="content">
+              Name Slider
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img" style="border-radius: 15px;">
+            <div class="content">
+              Name Slider
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+          <div class="con my-2">
+            <img src="C:\Users\USER\Desktop\co\images\rita-ora-portrait-uhd-8k-wallpaper.jpg" class="img" style="border-radius: 15px;">
+            <div class="content">
+              Name Slider
+            </div>
+            <div class="info mx-4">
+              <div class="btn">
+                shop now
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="arrowsl">
+      <button id="prev">
+        <</button>
+    </div>
+    <div class="arrowsr">
+      <button id="next">></button>
+    </div>
+    <script src="C:\Users\USER\Desktop\co\js\productcarousel.js"></script>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!--ads-->
+  <div class="banner w-100 " style="background-color: #eee;border-radius: 15px;">
+    <div class="banner1 row">
+      <div class="bannerimg col-sm-6">
+        <img src="C:\Users\USER\Desktop\co\images\banner1.jpg" width="100%" style="border-radius: 15px;">
+      </div>
+      <div class="bannercon col-sm-6">
+        <div class="cont mt-4 d-flex flex-column text-center justify-content-center align-items-center">
+          <h1 class="mt-5">“Announce your love story with elegance!”</h1>
+          <p class="mt-5">100 Wedding cards at Rs 350</p>
+          <button class="bann btn  mt-3" style="height: 50px;width: 120px;">shop now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="banner2 w-100 mt-5" style="background-color: #eee;border-radius: 15px;">
+    <div class="banner1 row">
+      <div class="bannercon col-sm-6">
+        <div class="cont mt-3 d-flex flex-column text-center justify-content-center align-items-center">
+          <h1 class="mt-5">“Turning Moments into Memories”</h1>
+          <p class="mt-5">100 Wedding cards at Rs 350</p>
+          <button class="bann btn  mt-3" style="height: 50px;width: 120px;">shop now</button>
+        </div>
+      </div>
+      <div class="bannerimg col-sm-6">
+        <img src="C:\Users\USER\Desktop\co\images\banner1.jpg" width="100%" style="border-radius: 15px;">
+      </div>
+    </div>
+  </div>
+  <!--footer-->
+  <footer class="bg-dark">
+    <div class="container foot mt-5 text-center">
+      <div class="row">
+        <div class="col-md-3 mt-5">
+          <h5><a>Easy Returns: Free Replacement or Full Refund</a></h5>
+          <img src="C:\Users\USER\Desktop\co\images\lg.png" class="w-50 mt-3">
+        </div>
+        <div class="col-md-3 mt-5">
+          <h5 >Let us help</h5>
+          <h5 class="mt-5"><a href="">My Account</a></h5>
+          <h5 ><a href="">Contact us</a></h5>
+          <h5 ><a href="">All Products</a></h5>
+        </div>
+        <div class="col-md-3 mt-5">
+          <h5 >Our Company</h5>
+          <h5 class="mt-5"><a href="">Careers</a></h5>
+          <h5 ><a href="">For investors</a></h5>
+          <h5 ><a href="">For media</a></h5>
+          <h5 ><a href="">Sustainability</a></h5>
+          <h5 ><a href="">Annual Returns</a></h5>
+          <h5 ><a href="">Corporate Social Responsibility</a></h5>
+        </div>
+        <div class="col-md-3 mt-5">
+          <h5 >Our policies</h5>
+          <h5 class="mt-5"><a href="">Terms and Conditions</a></h5>
+          <h5 ><a href="">Privacy and Cookie Policy</a></h5>
+          <h5 ><a href="">Copyright matters</a></h5>
+          <h5 ><a href="">Patents & trademarks</a></h5>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+</body>
+
+</html>

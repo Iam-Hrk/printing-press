@@ -1,0 +1,309 @@
+
+
+
+/**/
+
+
+.popprdct{
+    height: 260px;
+}
+.popprdct .items{
+    background-color: #070707;
+    height: 230px;
+}
+.popprdct .list .items{
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+    left: 0;
+}
+.popprdct .list .items img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.popprdct .list .items::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+.popprdct .list .items  .contents{
+    position: relative;
+    left: 10%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+}
+.popprdct .list .items.active{
+    opacity: 1;
+    z-index: 10;
+}
+.popprdct .list .arrowslpop{
+    position: absolute;
+    z-index: 100;
+    left: 1;
+}
+.popprdct .list .arrowslpop button{
+    background-color: rgba(252, 250, 250, 0.911);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: x-large;
+    color: #070707;
+    transition: .5s;
+}
+.popprdct .list .arrowslpop button:hover{
+    background-color: rgba(17, 11, 11, 0.333);
+    color: rgb(250, 250, 250);
+}
+.popprdct .list .arrowsrpop{
+    position: absolute;
+    z-index: 100;
+    right: 0;
+}
+.popprdct .list .arrowsrpop button{
+    background-color: rgba(252, 250, 250, 0.911);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: x-large;
+    color: #070707;
+    transition: .5s;
+}
+.popprdct .list .arrowsrpop button:hover{
+    background-color: rgba(17, 11, 11, 0.333);
+    color: rgb(250, 250, 250);
+}
+.popprdct .list .items .by1{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 300px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+    background-color: #eee;
+}
+.popprdct .list .items .by1::-webkit-scrollbar{
+    width: 0;
+}
+.popprdct .list .items .by1 .cons{
+    width: 190px;
+    height: 260px;
+    filter: brightness(1);
+    transition: .5s;
+    flex-shrink: 0;
+}
+.popprdct .list .items .by1{
+    display: flex;
+}
+
+
+.popprdct .list .items .by1 .cons:hover{
+    transform: translateY(20px);
+}
+.popprdct .list .items .by1 .cons .info{
+    position: absolute;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+.popprdct .list .items .by1 .cons:hover .info{
+    opacity: 1;
+    transform: translateY(-100px);
+}
+.popprdct .list .items .by1 .cons:hover .img{
+    opacity: 0.5;
+}
+.popprdct .list .items .by1 .cons .info .btn{
+    background-color: #070707;
+    color: aliceblue;
+}
+.popprdct .list .items .by1 .cons .info .btn:hover{
+    background-color: aliceblue;
+    color: #070707;
+}
+@media screen and (max-width:678px){
+    .popprdct .list .items .by1{
+        justify-content: start;
+    }
+    .popprdct .list .arrowslpop{
+        top: 1030px;
+        right: 0;
+    }
+    .popprdct .list  .arrowsrpop{
+        top: 1090px;
+        right: 0;
+    }
+    .popprdct .list .items{
+        margin-top: 970px;
+    }
+}
+
+
+
+/**/
+
+
+.contain .item{
+    height: 200px;
+    width: 100%;
+}
+.contain{
+    height: 100px;
+    width: 100%;
+    left: 0;
+}
+.list .item{
+    position: absolute;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+    left: 0;
+}
+.list .item img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.list .item::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+.list .item  .content{
+    position: relative;
+    left: 10%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+}
+.list .item.active{
+    opacity: 1;
+    z-index: 10;
+}
+.arrowsl{
+    position: relative;
+    z-index: 100;
+    width: 50px;
+    left: 0%;
+}
+.arrowsr{
+    position: relative;
+    z-index: 100;
+    left: 96%;
+    width: 50px;
+}
+.arrowsl button{
+    background-color: rgba(252, 250, 250, 0.911);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: x-large;
+    color: #070707;
+    transition: .5s;
+}
+.arrowsl button:hover{
+    background-color: rgba(17, 11, 11, 0.333);
+    color: rgb(250, 250, 250);
+}
+.arrowsr button{
+    background-color: rgba(252, 250, 250, 0.911);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: x-large;
+    color: #070707;
+    transition: .5s;
+}
+.arrowsr button:hover{
+    background-color: rgba(17, 11, 11, 0.333);
+    color: rgb(250, 250, 250);
+}
+.bx{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 300px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+    background-color: #eee;
+}
+.bx::-webkit-scrollbar{
+    width: 0;
+}
+.list .item .bx .con{
+    width: 150px;
+    height: 220px;
+    filter: brightness(1);
+    transition: .5s;
+    flex-shrink: 0;
+}
+.list .item .bx{
+    display: flex;
+}
+@media screen and (max-width:678px){
+    
+    .bx{
+        justify-content: start;
+    }
+    .arrowsl{
+        right: 0;
+    }
+    .arrowsr{
+        right: 0;
+    }
+}
+
+
+.con:hover{
+    transform: translateY(20px);
+}
+.con .info{
+    position: absolute;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+.con:hover .info{
+    opacity: 1;
+    transform: translateY(-100px);
+}
+.con:hover .img{
+    opacity: 0.5;
+}
+.info{
+    width: 160px;
+}
+.info .btn{
+    background-color: #070707;
+    color: aliceblue;
+}
+.info .btn:hover{
+    background-color: aliceblue;
+    color: #070707;
+}
